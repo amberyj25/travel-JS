@@ -1,0 +1,42 @@
+/* css rest start*/
+h3{
+  margin:0  
+}
+/* css rest stop*/
+header .location_selection{
+  background: url("./img/Hero.png") no-repeat;
+  background-size:cover;
+  height: 100%;
+  text-align:center;
+}
+header h1{
+  text-align: center;
+  padding: 150px 0;
+  color: white;
+}
+header select{
+  width: 350px;
+  height: 35px;
+  margin-bottom: 50px;
+}
+header .hotLocation{
+  background-color: white;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -35px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 1px 1px  gray;
+}
+header .hotLocation ul{
+  display: flex; 
+}
+header .hotLocation ul li{
+  list-style: none;
+}
+header .hotLocation ul li a{
+  text-decoration: none;
+  padding: 5px 10px;
+}
