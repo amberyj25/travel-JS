@@ -11,6 +11,8 @@ axios.get("https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290
   });
 }).then(function () {
   optionData()
+}).then(function () {
+  el.addEventListener("change", addLocation, false);
 })
 let optionData = function () {
   for (let i = 0; i < loactionDataionSelect.length; i++) {
@@ -19,7 +21,20 @@ let optionData = function () {
     el.appendChild(option);
   }
 }
-
+// innerHTML for str 外面 組字串 el.innerHTML=
+const locationH2 = document.querySelector("#locationH2");
+const locationUl = document.querySelector("#locationUl");
+function addLocation(e) {
+  locationH2.textContent = e.target.value;
+  let str = "";
+  data.forEach((item) => {
+    if (item.Zone == e.target.value) {
+      console.log(item);
+      str += `<li>${item.Name}</li>`;
+      locationUl.innerHTML = str;
+    }
+  })
+}
 
 
 

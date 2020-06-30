@@ -19,28 +19,39 @@ header select{
   height: 35px;
   margin-bottom: 50px;
 }
-header .hotLocation{
+header .hotlocation{
   background-color: white;
   width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -35px;
-  margin-bottom: 25px;
+  margin: -35px auto 25px auto;
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 1px 1px  gray;
 }
-header .hotLocation ul{
+header .hotlocation ul{
   display: flex; 
 }
-header .hotLocation ul li{
+header .hotlocation ul li{
   list-style: none;
   margin: 0 20px;
 }
-header .hotLocation ul li a{
+header .hotlocation ul li a{
   text-decoration: none;
   padding: 5px 20px;
 }
-header .hotLocation ul li a{
+header .hotlocation ul li a{
   background-color: yellow; 
 }
+main .content{
+  width:60%;
+  margin:auto
+}
+main .content .dashed{
+  display:flex;
+}
+main .content .dashed div{
+  width:45%;
+  margin:0 2%;
+}
+main .content .dashed div hr{
+  border-top:0.1rem blue dashed;
+} 
