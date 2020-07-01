@@ -14,35 +14,34 @@ header .location_selection{
 }
 header h1{
   text-align: center;
-  padding: 150px 0;
+  padding: 120px 0;
   color: white;
 }
 header select{
   width: 350px;
   height: 35px;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
 }
 header .hotlocation{
   background-color: white;
   width: 1000px;
   margin: -35px auto 25px auto;
   border-radius: 15px;
-  padding: 15px;
+  padding: 15px 20px;
   box-shadow: 0 1px 1px  gray;
 }
 header .hotlocation ul{
   display: flex; 
+  justify-content:center;
+  margin: 8px 0;
 }
 header .hotlocation ul li{
   list-style: none;
-  margin: 0 20px;
-}
-header .hotlocation ul li a{
-  text-decoration: none;
-  padding: 5px 20px;
-}
-header .hotlocation ul li a{
-  background-color: yellow; 
+  margin: 0 35px;
+  padding: 10px 45px;
+  background-color: yellow;
+  border: 1px solid lightpink;
+  border-radius: 10px;
 }
 main .content{
   width:70%;
