@@ -2,6 +2,7 @@ let data = "";
 let loactionDataion = [];
 let loactionDataionSelect = [];
 const el = document.querySelector("#loactionSelect");
+const hotlocationUl = document.querySelector(".hotlocation ul");
 axios.get("https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97").then((result) => {
   data = result.data.result.records;
   data.forEach((item) => {
@@ -14,6 +15,7 @@ axios.get("https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290
 }).then(function () {
   dataDefault();
   el.addEventListener("change", addLocation, false);
+  hotlocationUl.addEventListener("click", hotlocationAdd, false)
 });
 let optionData = function () {
   for (let i = 0; i < loactionDataionSelect.length; i++) {
@@ -62,3 +64,26 @@ function addLocation(e) {
     }
   })
 }
+function hotlocationAdd(e) {
+  if (e.target.nodeName == "A") {
+    locationH2.textContent = e.target.textContent;
+    let str = "";
+    data.forEach((item) => {
+      if (item.Zone == e.target.textContent) {
+        str += `<li>
+      <div class="locationImage" style="background:url(${item.Picture1});background-size:contain;">
+        <h4>${item.Name}</h4>
+      </div>
+        <div class="locationContent">
+        <p>${item.Opentime}</p>
+        <p>${item.Add}</p>
+        <p>${item.Tel}</p>
+        </div>
+      </li>`;
+        locationUl.innerHTML = str;
+      }
+    })
+  }
+}
+// select 用value
+// li textContent
