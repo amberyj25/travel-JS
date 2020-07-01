@@ -42,8 +42,8 @@ header .hotlocation ul li a{
   background-color: yellow; 
 }
 main .content{
-  width:60%;
-  margin:auto
+  width:70%;
+  margin:auto;
 }
 main .content .dashed{
   display:flex;
@@ -55,3 +55,30 @@ main .content .dashed div{
 main .content .dashed div hr{
   border-top:0.1rem blue dashed;
 } 
+main #locationUl{
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+main #locationUl li{
+  padding: 0 10px;
+}
+main #locationUl li .locationImage{
+  width:450px;
+  height:300px;
+  position: relative;
+}
+main #locationUl li .locationImage h4{
+  color: yellow;
+  position: absolute;
+  bottom:0;
+  left:5%;
+  letter-spacing:5px;
+  font-size:1.5rem; 
+}
+main #locationUl li div{
+  width:450px;
+}
