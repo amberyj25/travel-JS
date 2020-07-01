@@ -1,8 +1,11 @@
-/* css rest start*/
-h3{
+/* css reset start*/
+body,h1,h2,h3,ul{
   margin:0  
 }
-/* css rest stop*/
+ul{
+  padding:0;
+}
+/* css reset stop*/
 header .location_selection{
   background: url("./img/Hero.png") no-repeat;
   background-size:cover;
@@ -60,8 +63,6 @@ main #locationUl{
   display: flex;
   flex-wrap:wrap;
   list-style: none;
-  margin:0;
-  padding:0;
 }
 main #locationUl li{
   padding: 0 10px;
