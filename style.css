@@ -82,3 +82,12 @@ main #locationUl li .locationImage h4{
 main #locationUl li div{
   width:450px;
 }
+footer{
+  height: 80px;
+  background: rgb(0, 68, 255);
+}
+footer p{
+ text-align:center;
+ line-height: 80px;  
+ color: yellow;
+}
