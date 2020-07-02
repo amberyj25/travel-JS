@@ -32,13 +32,13 @@ let dataDefault = function () {
   data.forEach((item) => {
     if (item.Zone == "三民區") {
       str += `<li>
-      <div class="locationImage" style="background:url(${item.Picture1});background-size:contain;">
+      <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
         <h4>${item.Name}</h4>
       </div>
         <div class="locationContent">
-        <p><i class="far fa-clock"></i><span>${item.Opentime}</span></p>
-        <p><i class="fas fa-map-marker-check"></i><img src=""><span>${item.Add}</span></p>
-        <p><i class="fas fa-phone-alt"></i><img src=""><span>${item.Tel}</span></p>
+        <p><i class="far fa-clock" style="margin-right:10px;"></i><span>${item.Opentime}</span></p>
+        <p><i class="fas fa-map-marker-check" style="margin-right:10px;"></i><span>${item.Add}</span></p>
+        <p><i class="fas fa-phone-alt" style="margin-right:10px;"></i><span>${item.Tel}</span></p>
         </div>
       </li>`;
       locationUl.innerHTML = str;
@@ -51,13 +51,13 @@ function addLocation(e) {
   data.forEach((item) => {
     if (item.Zone == e.target.value) {
       str += `<li>
-      <div class="locationImage" style="background:url(${item.Picture1});background-size:contain;">
+      <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
         <h4>${item.Name}</h4>
       </div>
         <div class="locationContent">
-        <p>${item.Opentime}</p>
-        <p>${item.Add}</p>
-        <p>${item.Tel}</p>
+        <p><i class="far fa-clock" style="margin-right:10px;"></i><span>${item.Opentime}</span></p>
+        <p><i class="fas fa-map-marker-check" style="margin-right:10px;"></i><span>${item.Add}</span></p>
+        <p><i class="fas fa-phone-alt" style="margin-right:10px;"></i><span>${item.Tel}</span></p>
         </div>
       </li>`;
       locationUl.innerHTML = str;
@@ -71,13 +71,13 @@ function hotlocationAdd(e) {
     data.forEach((item) => {
       if (item.Zone == e.target.textContent) {
         str += `<li>
-      <div class="locationImage" style="background:url(${item.Picture1});background-size:contain;">
+      <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
         <h4>${item.Name}</h4>
       </div>
         <div class="locationContent">
-        <p>${item.Opentime}</p>
-        <p>${item.Add}</p>
-        <p>${item.Tel}</p>
+        <p><i class="far fa-clock" style="margin-right:10px;"></i><span>${item.Opentime}</span></p>
+        <p><i class="fas fa-map-marker-check" style="margin-right:10px;"></i><span>${item.Add}</span></p>
+        <p><i class="fas fa-phone-alt" style="margin-right:10px;"></i><span>${item.Tel}</span></p>
         </div>
       </li>`;
         locationUl.innerHTML = str;

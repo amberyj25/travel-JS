@@ -43,6 +43,9 @@ header .hotlocation ul li{
   border: 1px solid lightpink;
   border-radius: 10px;
 }
+header .hotlocation ul li a{
+  text-decoration: none;
+}
 main .content{
   width:70%;
   margin:auto;
@@ -57,17 +60,21 @@ main .content .dashed div{
 main .content .dashed div hr{
   border-top:0.1rem blue dashed;
 } 
+main .location h2{
+  text-align: center;
+}
 main #locationUl{
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-wrap:wrap;
   list-style: none;
 }
-main #locationUl li{
+/* main #locationUl li{
   padding: 0 10px;
-}
+} */
 main #locationUl li .locationImage{
-  width:450px;
+  width:500px;
   height:300px;
   position: relative;
 }
