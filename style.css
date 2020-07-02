@@ -66,13 +66,13 @@ main .location h2{
 main #locationUl{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap:wrap;
   list-style: none;
 }
-/* main #locationUl li{
-  padding: 0 10px;
-} */
+main #locationUl li{
+  margin: 2px;
+}
 main #locationUl li .locationImage{
   width:500px;
   height:300px;
