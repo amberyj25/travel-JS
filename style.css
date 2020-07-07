@@ -6,6 +6,9 @@ ul{
   padding:0;
 }
 /* css reset stop*/
+body{
+  min-width: 1100px;
+}
 header .location_selection{
   background: url("./img/Hero.png") no-repeat;
   background-size:cover;
