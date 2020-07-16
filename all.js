@@ -85,5 +85,10 @@ function hotlocationAdd(e) {
     })
   }
 }
+let a1 = 5;
+function a2() {
+  console.log(a1)
+}
+a2();
 // select 用value
 // li textContent

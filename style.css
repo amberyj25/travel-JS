@@ -50,7 +50,7 @@ header .hotlocation ul li a{
   text-decoration: none;
 }
 main .content{
-  width:70%;
+  width:75%;
   margin:auto;
 }
 main .content .dashed{
@@ -69,17 +69,19 @@ main .location h2{
 main #locationUl{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap:wrap;
   list-style: none;
 }
-main #locationUl li{
+/* main #locationUl li{
   margin: 2px;
-}
+} */
 main #locationUl li .locationImage{
   width:500px;
   height:300px;
   position: relative;
+  border-radius: 5px;
+  box-shadow: 20px 20px 10px gray; 
 }
 main #locationUl li .locationImage h4{
   color: yellow;
@@ -90,7 +92,9 @@ main #locationUl li .locationImage h4{
   font-size:1.5rem; 
 }
 main #locationUl li div{
+  box-sizing: border-box;
   width:450px;
+  padding: 25px;
 }
 footer{
   height: 80px;
