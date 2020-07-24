@@ -3,7 +3,7 @@ let loactionDataion = [];
 let loactionDataionSelect = [];
 const el = document.querySelector("#loactionSelect");
 const hotlocationUl = document.querySelector(".hotlocation ul");
-axios.get("https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97").then((result) => {
+axios.get("https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json").then((result) => {
   data = result.data.result.records;
   data.forEach((item) => {
     if (loactionDataionSelect.indexOf(item.Zone) == -1) {
