@@ -24,7 +24,6 @@ let optionData = function () {
     el.appendChild(option);
   }
 }
-// innerHTML for str 外面 組字串 el.innerHTML=
 const locationH2 = document.querySelector("#locationH2");
 const locationUl = document.querySelector("#locationUl");
 let dataDefault = function () {
@@ -32,8 +31,10 @@ let dataDefault = function () {
   data.forEach((item) => {
     if (item.Zone == "三民區") {
       str += `<li>
-      <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
-        <h4>${item.Name}</h4>
+      <div class="locationImage_outer">
+        <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
+          <h4>${item.Name}</h4>
+        </div>
       </div>
         <div class="locationContent">
         <p><i class="far fa-clock" style="margin-right:10px;"></i><span>${item.Opentime}</span></p>
@@ -51,9 +52,11 @@ function addLocation(e) {
   data.forEach((item) => {
     if (item.Zone == e.target.value) {
       str += `<li>
-      <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
-        <h4>${item.Name}</h4>
-      </div>
+        <div class="locationImage_outer">
+          <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
+            <h4>${item.Name}</h4>
+          </div>
+        </div>
         <div class="locationContent">
         <p><i class="far fa-clock" style="margin-right:10px;"></i><span>${item.Opentime}</span></p>
         <p><i class="fas fa-map-marker-check" style="margin-right:10px;"></i><span>${item.Add}</span></p>
@@ -71,9 +74,11 @@ function hotlocationAdd(e) {
     data.forEach((item) => {
       if (item.Zone == e.target.textContent) {
         str += `<li>
-      <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
-        <h4>${item.Name}</h4>
-      </div>
+        <div class="locationImage_outer">
+          <div class="locationImage" style="background:url(${item.Picture1});background-size:cover;">
+            <h4>${item.Name}</h4>
+          </div>
+        </div>
         <div class="locationContent">
         <p><i class="far fa-clock" style="margin-right:10px;"></i><span>${item.Opentime}</span></p>
         <p><i class="fas fa-map-marker-check" style="margin-right:10px;"></i><span>${item.Add}</span></p>

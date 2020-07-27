@@ -45,10 +45,21 @@ header .hotlocation ul li{
   background-color: yellow;
   border: 1px solid lightpink;
   border-radius: 10px;
+  position: relative;
+  overflow:hidden;
 }
 header .hotlocation ul li a{
+  font-size: 18px;
+  color: darkslateblue;
   text-decoration: none;
 }
+header .hotlocation ul li:hover{
+  background: lightgreen;
+}
+header .hotlocation ul li:hover a{
+    color: blueviolet;
+}
+
 main .content{
   width:75%;
   margin:auto;
@@ -73,28 +84,36 @@ main #locationUl{
   flex-wrap:wrap;
   list-style: none;
 }
-/* main #locationUl li{
-  margin: 2px;
-} */
-main #locationUl li .locationImage{
-  width:500px;
-  height:300px;
-  position: relative;
-  border-radius: 5px;
-  box-shadow: 20px 20px 10px gray; 
+main #locationUl li div{
+  box-sizing: border-box;
+  width:450px;
 }
+main #locationUl li .locationImage_outer{
+  width:500px;
+  height: 300px;
+  position: relative;
+  overflow:hidden;
+  border-radius: 15px;
+}
+main #locationUl li .locationImage_outer .locationImage{
+  width:100%;
+  height:100%;
+  position: absolute;
+  box-shadow: 12px 12px 8px gray; 
+  transition: all 1s;
+  background-size:contain;
+}
+main #locationUl li .locationImage:hover{
+  transform:scale(1.1);
+}
+
 main #locationUl li .locationImage h4{
   color: yellow;
   position: absolute;
   bottom:0;
-  left:5%;
+  left:10%;
   letter-spacing:5px;
   font-size:1.5rem; 
-}
-main #locationUl li div{
-  box-sizing: border-box;
-  width:450px;
-  padding: 25px;
 }
 footer{
   height: 80px;
